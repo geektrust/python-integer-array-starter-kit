@@ -6,12 +6,13 @@ class Main:
         * to different variables.                      *
         ***********************************************
 
-        Format of input_str: "2, 7, 11, 15"
+        Format of input_str: "[2, 7, 11, 15]"
 
         Your final output needs to be printed to the console.
         """
 
         # Parse array and integer
+        cleaned = input_str.strip("[]").strip()
         arr = [int(x.strip()) for x in input_str.split(",")]
 
         # Output
