@@ -11,9 +11,11 @@ class Main:
         Your final output needs to be printed to the console.
         """
 
-        # Parse array and integer
-        cleaned = input_str.strip("[]").strip()
-        arr = [int(x.strip()) for x in input_str.split(",")]
+       # Remove brackets if present
+        cleaned = input_str.strip().strip("[]")
+
+        # Convert to integers
+        arr = [int(x.strip()) for x in cleaned.split(",") if x.strip()]
 
         # Output
         print("Array:", arr)
